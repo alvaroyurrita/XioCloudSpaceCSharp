@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <Configurations>Debug;Release;yrdy</Configurations>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Crestron.SimplSharp.SDK.Program" Version="2.22.15" />
+      <PackageReference Include="Serilog.Crestron" Version="2.1.0" />
+    </ItemGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugAppliance|AnyCPU'">
+        <IsPublishable>False</IsPublishable>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseAppliance|AnyCPU'">
+        <IsPublishable>False</IsPublishable>
+        <Optimize>True</Optimize>
+        <DebugType>none</DebugType>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseServer|AnyCPU'">
+        <IsPublishable>False</IsPublishable>
+        <Optimize>True</Optimize>
+        <DebugType>none</DebugType>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugServer|AnyCPU'">
+        <IsPublishable>False</IsPublishable>
+    </PropertyGroup>
+
+    <Target Name="CLZPostBuildActions" AfterTargets="AfterBuild">
+        <Exec Command="&quot;C:\Program Files\PowerShell\7\pwsh.exe&quot; -command &quot;&amp; { .\Deployment.ps1 -ProjectDir '$(ProjectDir)' -OutDir '$(OutDir)' -ProjectName '$(ProjectName)' -Configuration '$(Configuration)' }&quot;" />
+    </Target>
+
+</Project>
