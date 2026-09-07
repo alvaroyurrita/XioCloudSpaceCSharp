@@ -1,4 +1,7 @@
 ﻿using Crestron.SimplSharpPro;
+using System.Collections.Generic;
+using System.Linq;
+using XIOCloudRoomGUI;
 
 namespace XioCloudCSharp
 {
@@ -15,6 +18,26 @@ namespace XioCloudCSharp
                 );
             return dictionary;
         }
+
+        public static bool GetContractSignalBoolState(UIEventArgs args)
+        {
+            if (args.SigArgs.Event == eSigEvent.BoolChange)
+            {
+                return args.SigArgs.Sig.BoolValue;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public static bool Boolean(this UIEventArgs eventArgs) => 
+            eventArgs.SigArgs.Event == eSigEvent.BoolChange && eventArgs.SigArgs.Sig.BoolValue;
         
+        public static ushort UShort(this UIEventArgs eventArgs) =>
+            eventArgs.SigArgs.Event == eSigEvent.UShortChange ? eventArgs.SigArgs.Sig.UShortValue : (ushort)0;
+        
+        public static string String(this UIEventArgs eventArgs) =>
+            eventArgs.SigArgs.Event == eSigEvent.StringChange ? eventArgs.SigArgs.Sig.StringValue : string.Empty;
     }
 }

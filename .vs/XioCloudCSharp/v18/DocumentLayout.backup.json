@@ -1,7 +1,36 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\GIT Development\\Learning\\Masters 2026\\XioCloudCSharp\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{32D56CD1-E3D0-4987-90C8-4F24B8F4CD3C}|XioCloudCSharp\\XioCloudCSharp.csproj|d:\\git development\\learning\\masters 2026\\xiocloudcsharp\\xiocloudcsharp\\uievents\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32D56CD1-E3D0-4987-90C8-4F24B8F4CD3C}|XioCloudCSharp\\XioCloudCSharp.csproj|solutionrelative:xiocloudcsharp\\uievents\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32D56CD1-E3D0-4987-90C8-4F24B8F4CD3C}|XioCloudCSharp\\XioCloudCSharp.csproj|d:\\git development\\learning\\masters 2026\\xiocloudcsharp\\xiocloudcsharp\\controlsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32D56CD1-E3D0-4987-90C8-4F24B8F4CD3C}|XioCloudCSharp\\XioCloudCSharp.csproj|solutionrelative:xiocloudcsharp\\controlsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32D56CD1-E3D0-4987-90C8-4F24B8F4CD3C}|XioCloudCSharp\\XioCloudCSharp.csproj|d:\\git development\\learning\\masters 2026\\xiocloudcsharp\\xiocloudcsharp\\helperclasses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32D56CD1-E3D0-4987-90C8-4F24B8F4CD3C}|XioCloudCSharp\\XioCloudCSharp.csproj|solutionrelative:xiocloudcsharp\\helperclasses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32D56CD1-E3D0-4987-90C8-4F24B8F4CD3C}|XioCloudCSharp\\XioCloudCSharp.csproj|d:\\git development\\learning\\masters 2026\\xiocloudcsharp\\xiocloudcsharp\\xiocloudspaceevents\\systemevents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32D56CD1-E3D0-4987-90C8-4F24B8F4CD3C}|XioCloudCSharp\\XioCloudCSharp.csproj|solutionrelative:xiocloudcsharp\\xiocloudspaceevents\\systemevents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32D56CD1-E3D0-4987-90C8-4F24B8F4CD3C}|XioCloudCSharp\\XioCloudCSharp.csproj|d:\\git development\\learning\\masters 2026\\xiocloudcsharp\\xiocloudcsharp\\xiocloudspaceevents\\xioeventidhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32D56CD1-E3D0-4987-90C8-4F24B8F4CD3C}|XioCloudCSharp\\XioCloudCSharp.csproj|solutionrelative:xiocloudcsharp\\xiocloudspaceevents\\xioeventidhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32D56CD1-E3D0-4987-90C8-4F24B8F4CD3C}|XioCloudCSharp\\XioCloudCSharp.csproj|d:\\git development\\learning\\masters 2026\\xiocloudcsharp\\xiocloudcsharp\\xiocloudspaceevents\\metadataevents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32D56CD1-E3D0-4987-90C8-4F24B8F4CD3C}|XioCloudCSharp\\XioCloudCSharp.csproj|solutionrelative:xiocloudcsharp\\xiocloudspaceevents\\metadataevents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32D56CD1-E3D0-4987-90C8-4F24B8F4CD3C}|XioCloudCSharp\\XioCloudCSharp.csproj|d:\\git development\\learning\\masters 2026\\xiocloudcsharp\\xiocloudcsharp\\xiocloudcsharp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{32D56CD1-E3D0-4987-90C8-4F24B8F4CD3C}|XioCloudCSharp\\XioCloudCSharp.csproj|solutionrelative:xiocloudcsharp\\xiocloudcsharp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +38,73 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 8,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HelperClasses.cs",
+              "DocumentMoniker": "D:\\GIT Development\\Learning\\Masters 2026\\XioCloudCSharp\\XioCloudCSharp\\HelperClasses.cs",
+              "RelativeDocumentMoniker": "XioCloudCSharp\\HelperClasses.cs",
+              "ToolTip": "D:\\GIT Development\\Learning\\Masters 2026\\XioCloudCSharp\\XioCloudCSharp\\HelperClasses.cs",
+              "RelativeToolTip": "XioCloudCSharp\\HelperClasses.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-06T23:03:25.775Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ControlSystem.cs",
+              "DocumentMoniker": "D:\\GIT Development\\Learning\\Masters 2026\\XioCloudCSharp\\XioCloudCSharp\\ControlSystem.cs",
+              "RelativeDocumentMoniker": "XioCloudCSharp\\ControlSystem.cs",
+              "ToolTip": "D:\\GIT Development\\Learning\\Masters 2026\\XioCloudCSharp\\XioCloudCSharp\\ControlSystem.cs",
+              "RelativeToolTip": "XioCloudCSharp\\ControlSystem.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAA9wCkAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-06T22:02:09.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SystemEvents.cs",
+              "DocumentMoniker": "D:\\GIT Development\\Learning\\Masters 2026\\XioCloudCSharp\\XioCloudCSharp\\XioCloudSpaceEvents\\SystemEvents.cs",
+              "RelativeDocumentMoniker": "XioCloudCSharp\\XioCloudSpaceEvents\\SystemEvents.cs",
+              "ToolTip": "D:\\GIT Development\\Learning\\Masters 2026\\XioCloudCSharp\\XioCloudCSharp\\XioCloudSpaceEvents\\SystemEvents.cs",
+              "RelativeToolTip": "XioCloudCSharp\\XioCloudSpaceEvents\\SystemEvents.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwCAAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-06T21:56:09.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MetaDataEvents.cs",
+              "DocumentMoniker": "D:\\GIT Development\\Learning\\Masters 2026\\XioCloudCSharp\\XioCloudCSharp\\XioCloudSpaceEvents\\MetaDataEvents.cs",
+              "RelativeDocumentMoniker": "XioCloudCSharp\\XioCloudSpaceEvents\\MetaDataEvents.cs",
+              "ToolTip": "D:\\GIT Development\\Learning\\Masters 2026\\XioCloudCSharp\\XioCloudCSharp\\XioCloudSpaceEvents\\MetaDataEvents.cs",
+              "RelativeToolTip": "XioCloudCSharp\\XioCloudSpaceEvents\\MetaDataEvents.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-06T21:55:33.23Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "XioEventIdHandler.cs",
+              "DocumentMoniker": "D:\\GIT Development\\Learning\\Masters 2026\\XioCloudCSharp\\XioCloudCSharp\\XioCloudSpaceEvents\\XioEventIdHandler.cs",
+              "RelativeDocumentMoniker": "XioCloudCSharp\\XioCloudSpaceEvents\\XioEventIdHandler.cs",
+              "ToolTip": "D:\\GIT Development\\Learning\\Masters 2026\\XioCloudCSharp\\XioCloudCSharp\\XioCloudSpaceEvents\\XioEventIdHandler.cs",
+              "RelativeToolTip": "XioCloudCSharp\\XioCloudSpaceEvents\\XioEventIdHandler.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAiwB0AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-06T21:53:00.859Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -22,6 +116,32 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Main.cs",
+              "DocumentMoniker": "D:\\GIT Development\\Learning\\Masters 2026\\XioCloudCSharp\\XioCloudCSharp\\UiEvents\\Main.cs",
+              "RelativeDocumentMoniker": "XioCloudCSharp\\UiEvents\\Main.cs",
+              "ToolTip": "D:\\GIT Development\\Learning\\Masters 2026\\XioCloudCSharp\\XioCloudCSharp\\UiEvents\\Main.cs",
+              "RelativeToolTip": "XioCloudCSharp\\UiEvents\\Main.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAgwAsAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-06T21:44:23.322Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "XioCloudCSharp",
+              "DocumentMoniker": "D:\\GIT Development\\Learning\\Masters 2026\\XioCloudCSharp\\XioCloudCSharp\\XioCloudCSharp.csproj",
+              "RelativeDocumentMoniker": "XioCloudCSharp\\XioCloudCSharp.csproj",
+              "ToolTip": "D:\\GIT Development\\Learning\\Masters 2026\\XioCloudCSharp\\XioCloudCSharp\\XioCloudCSharp.csproj",
+              "RelativeToolTip": "XioCloudCSharp\\XioCloudCSharp.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-09-06T21:44:22.884Z",
+              "EditorCaption": ""
             }
           ]
         }

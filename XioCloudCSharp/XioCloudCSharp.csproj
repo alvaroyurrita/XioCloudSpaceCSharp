@@ -1,10 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
+        <TargetFramework>net472</TargetFramework>
+        <ImplicitUsings>disable</ImplicitUsings>
+        <LangVersion>8.0</LangVersion>
         <Nullable>enable</Nullable>
-        <Configurations>Debug;Release;yrdy</Configurations>
+        <Configurations>Debug;Release;DebugAppliance;DebugServer;ReleaseAppliance;ReleaseServer</Configurations>
     </PropertyGroup>
 
     <ItemGroup>
