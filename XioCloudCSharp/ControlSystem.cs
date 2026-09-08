@@ -41,6 +41,7 @@ namespace XioCloudCSharp
         public void SubscribeToUiEvents()
         {
             SubscribeUiSystemCheckEvents();
+            SubscribeUiMainEvents();
         }
 
         public override void InitializeSystem()
