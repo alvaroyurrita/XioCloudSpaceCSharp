@@ -67,6 +67,13 @@ namespace XioCloudCSharp
                 case XioCloudSpaceEventIds.ShadesClosedSceneEventId:
                     XioShadesEventsHandler(args.EventId, args.Index);
                     break;
+                case XioCloudSpaceEventIds.TemperatureInCelsiusEventId:
+                case XioCloudSpaceEventIds.TemperatureInFahrenheitEventId:
+                case XioCloudSpaceEventIds.TemperatureSetpointEventId:
+                case XioCloudSpaceEventIds.HumiditySetpointEventId:
+                    XioClimateEventsHandler(args.EventId);
+                    break;
+                
             }
         }
     }

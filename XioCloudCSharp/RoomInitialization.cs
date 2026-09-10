@@ -31,5 +31,15 @@ namespace XioCloudCSharp
             xioShades.ShadeSceneNames[5].StringValue = ShadeSceneNames[5];
             uiShades.ShadesScene5_Serial_CIP(ShadeSceneNames[5]);
         }
+
+        private void InitializeClimate()
+        {
+            TemperatureInCelsius = false;
+            SetTemperature = 700;
+            CurrentTemperature = 700;
+            SetHumidity = 50;
+            CurrentHumidity = 50;
+            CurrentClimateMode = 4;
+        }
     }
 }

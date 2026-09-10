@@ -25,10 +25,7 @@ namespace XioCloudCSharp
             {
                 return args.SigArgs.Sig.BoolValue;
             }
-            else
-            {
-                return false;
-            }
+            return false;
         }
 
         public static bool Boolean(this UIEventArgs eventArgs) => 
@@ -46,5 +43,8 @@ namespace XioCloudCSharp
             var future = now.AddHours(index);
             return future.ToString("MM/dd/yyyy HH:mm:ss");
         }
+        
+        public static ushort CelsiusToFahrenheit(ushort celsius) => (ushort)((celsius * 9 / 5) + 320);
+        public static ushort FahrenheitToCelsius(ushort fahrenheit) => (ushort)((fahrenheit - 320) * 5 / 9);
     }
 }

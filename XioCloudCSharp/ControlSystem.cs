@@ -47,6 +47,7 @@ namespace XioCloudCSharp
             SubscribeUiSchedulingEvents();
             SubscribeUiLightsEvents();
             SubscribeUiShadesEvents();
+            SubscribeUiClimateEvents();
         }
 
         public override void InitializeSystem()
@@ -61,6 +62,7 @@ namespace XioCloudCSharp
             }
 
             _touchPanel.Register();
+            InitializeClimate();
         }
 
         private void XioCloudSpace_OnlineStatusChange(GenericBase currentDevice, OnlineOfflineEventArgs args)
