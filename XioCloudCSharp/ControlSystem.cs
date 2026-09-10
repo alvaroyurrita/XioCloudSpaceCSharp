@@ -70,6 +70,7 @@ namespace XioCloudCSharp
             _logger.Debug("XiO Cloud Space online status changed: IsOnline [{IsOnline}]", args.DeviceOnLine);
             UpdateLightSceneName();
             UpdateShadeSceneName();
+            UpdateQuickActions();
         }
 
         private string GetEventName(int eventId) =>

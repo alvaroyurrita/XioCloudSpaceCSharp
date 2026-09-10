@@ -32,6 +32,17 @@ namespace XioCloudCSharp
             uiShades.ShadesScene5_Serial_CIP(ShadeSceneNames[5]);
         }
 
+        private void UpdateQuickActions()
+        {
+            var xioQuickActions = ControllerXioCloudSpaceSlotDevice.QuickAction;
+            xioQuickActions.QuickActionNames[1].StringValue = QuickActionNames[1];
+            xioQuickActions.QuickActionNames[2].StringValue = QuickActionNames[2];
+            xioQuickActions.QuickActionNames[3].StringValue = QuickActionNames[3];
+            xioQuickActions.QuickActionNames[4].StringValue = QuickActionNames[4];
+            xioQuickActions.QuickActionNames[5].StringValue = QuickActionNames[5];
+            xioQuickActions.QuickActionNames[6].StringValue = QuickActionNames[6];
+        }
+
         private void InitializeClimate()
         {
             TemperatureInCelsius = false;

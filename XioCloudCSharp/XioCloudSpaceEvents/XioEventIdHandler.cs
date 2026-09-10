@@ -73,6 +73,9 @@ namespace XioCloudCSharp
                 case XioCloudSpaceEventIds.HumiditySetpointEventId:
                     XioClimateEventsHandler(args.EventId);
                     break;
+                case XioCloudSpaceEventIds.QuickActionEventId: 
+                    XioQuickActionsEventsHandler(args.EventId, (ushort)args.Index);
+                    break;
                 
             }
         }
