@@ -8,7 +8,7 @@ namespace XioCloudCSharp
         {
             var uiLights = _xioCloudRoomGui.Main.Lights;
             var xioLights = ControllerXioCloudSpaceSlotDevice.Lighting;
-            var currentSceneName = string.Empty;
+            var currentLightSceneName = string.Empty;
             
             _logger.Debug("Subscribing to UI Main Lights events...");
             uiLights.LightsScene1_PressEvent += (_, args) =>
@@ -38,17 +38,17 @@ namespace XioCloudCSharp
 
             uiLights.LightsSceneNameText_OutputTextEvent += (_, args) =>
             {
-                currentSceneName = args.String();
-                _logger.Debug("LightsSceneNameText_OutputTextEvent. Current Scene Name: {SceneName}:", currentSceneName);
-                uiLights.LightsSceneNameText_IndirectText(currentSceneName);
+                currentLightSceneName = args.String();
+                _logger.Debug("LightsSceneNameText_OutputTextEvent. Current Scene Name: {SceneName}:", currentLightSceneName);
+                uiLights.LightsSceneNameText_IndirectText(currentLightSceneName);
             };
             uiLights.LightsRequestByNamePress_PressEvent += (_, args) =>
             {
-                if (! string.IsNullOrEmpty(currentSceneName))
+                if (! string.IsNullOrEmpty(currentLightSceneName))
                 {
-                   xioLights.ActiveLightSceneName.StringValue = currentSceneName;
-                   currentSceneName = string.Empty;
-                   uiLights.LightsSceneNameText_IndirectText(currentSceneName);
+                   xioLights.ActiveLightSceneName.StringValue = currentLightSceneName;
+                   currentLightSceneName = string.Empty;
+                   uiLights.LightsSceneNameText_IndirectText(currentLightSceneName);
                 }
             };
             
@@ -62,11 +62,11 @@ namespace XioCloudCSharp
                     _logger.Debug("Toggling Lights Scene {Scene}...", scene);
                     CurrentLightScene = scene;
                 }
-                if (!string.IsNullOrEmpty(currentSceneName))
+                if (!string.IsNullOrEmpty(currentLightSceneName))
                 {
-                    ChangeLightSceneName(CurrentLightScene, currentSceneName);
-                    currentSceneName = string.Empty;
-                    uiLights.LightsSceneNameText_IndirectText(currentSceneName);
+                    ChangeLightSceneName(CurrentLightScene, currentLightSceneName);
+                    currentLightSceneName = string.Empty;
+                    uiLights.LightsSceneNameText_IndirectText(currentLightSceneName);
                 }
             }
         }

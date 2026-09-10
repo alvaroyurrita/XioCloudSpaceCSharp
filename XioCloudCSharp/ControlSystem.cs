@@ -46,6 +46,7 @@ namespace XioCloudCSharp
             SubscribeUiVolumeEvents();
             SubscribeUiSchedulingEvents();
             SubscribeUiLightsEvents();
+            SubscribeUiShadesEvents();
         }
 
         public override void InitializeSystem()
@@ -66,6 +67,7 @@ namespace XioCloudCSharp
         {
             _logger.Debug("XiO Cloud Space online status changed: IsOnline [{IsOnline}]", args.DeviceOnLine);
             UpdateLightSceneName();
+            UpdateShadeSceneName();
         }
 
         private string GetEventName(int eventId) =>

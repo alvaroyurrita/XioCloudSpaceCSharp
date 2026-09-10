@@ -61,6 +61,12 @@ namespace XioCloudCSharp
                 case XioCloudSpaceEventIds.LightsOffSceneEventId:
                     XioLightingEventsHandler(args.EventId, args.Index);
                     break;
+                case XioCloudSpaceEventIds.RequestedShadeSceneNameEventId:
+                case XioCloudSpaceEventIds.ShadesOpenSceneEventId:
+                case XioCloudSpaceEventIds.ShadeSceneEventId:
+                case XioCloudSpaceEventIds.ShadesClosedSceneEventId:
+                    XioShadesEventsHandler(args.EventId, args.Index);
+                    break;
             }
         }
     }
