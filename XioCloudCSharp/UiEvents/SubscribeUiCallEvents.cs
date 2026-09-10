@@ -4,9 +4,9 @@
     {
         public void SubscribeUiCallEvents()
         {
-            var uiMain = _xioCloudRoomGui.Main;
+            var uiCall = _xioCloudRoomGui.Main.Call;
             _logger.Debug("Subscribing to UI Main Call events...");
-            uiMain.Call.InCallToggle_PressEvent += (_, args) =>
+            uiCall.InCallToggle_PressEvent += (_, args) =>
             {
                 var state = args.Boolean();
                 _logger.Debug("InCallToggle_PressEvent. State {State}:", state);

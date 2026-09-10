@@ -32,13 +32,13 @@ namespace XioCloudCSharp
                 case XioCloudSpaceEventIds.MaintenanceModeEventId:
                 case XioCloudSpaceEventIds.PeopleCountEventId:
                     XioSystemEventsHandler(args.EventId);
-                    break; 
+                    break;
                 case XioCloudSpaceEventIds.VolumeLevelEventId:
                 case XioCloudSpaceEventIds.VolumeMuteOnEventId:
                 case XioCloudSpaceEventIds.VolumeMuteOffEventId:
                 case XioCloudSpaceEventIds.MicrophonePrivacyOnEventId:
                 case XioCloudSpaceEventIds.MicrophonePrivacyOffEventId:
-                    XioVolumeEventsHandler(args.EventId); 
+                    XioVolumeEventsHandler(args.EventId);
                     break;
                 case XioCloudSpaceEventIds.InCallEventId:
                 case XioCloudSpaceEventIds.NotInCallEventId:
@@ -54,6 +54,12 @@ namespace XioCloudCSharp
                 case XioCloudSpaceEventIds.CurrentMeetingStopTimeEventId:
                 case XioCloudSpaceEventIds.NextMeetingStartTimeEventId:
                     XioSchedulingEventsHandler(args.EventId);
+                    break;
+                case XioCloudSpaceEventIds.RequestedLightSceneNameEventId:
+                case XioCloudSpaceEventIds.LightsOnSceneEventId:
+                case XioCloudSpaceEventIds.LightSceneEventId:
+                case XioCloudSpaceEventIds.LightsOffSceneEventId:
+                    XioLightingEventsHandler(args.EventId, args.Index);
                     break;
             }
         }

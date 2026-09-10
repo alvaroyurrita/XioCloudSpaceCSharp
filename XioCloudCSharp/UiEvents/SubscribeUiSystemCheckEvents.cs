@@ -22,7 +22,7 @@ namespace XioCloudCSharp
                 { XioCloudSpaceSlotBase.eSystemCheckState.Failed, () => uiMain.CheckFailedPress_Selected(true) },
                 { XioCloudSpaceSlotBase.eSystemCheckState.Error, () => uiMain.CheckWithErrorsPress_Selected(true) }
             };
-            var currentSystemCheckMessage = "";
+            var currentSystemCheckMessage = string.Empty;
 
             _logger.Debug("Subscribing to UI Main System Check events...");
             uiMain.CheckIdlePress_PressEvent += (_, args) =>
@@ -102,8 +102,8 @@ namespace XioCloudCSharp
                 _logger.Debug("SystemCheckEnd. Resetting system check state to Standby after 5 seconds");
                 SetUiSystemCheckButtonsEnabled(false);
                 uiMain.SystemCheckRequest_Selected(false);
-                uiMain.SystemCheckMessage_IndirectText("");
-                currentSystemCheckMessage = "";
+                uiMain.SystemCheckMessage_IndirectText(string.Empty);
+                currentSystemCheckMessage = string.Empty;
                 Task.Run(async () =>
                     {
                         await Task.Delay(5000);

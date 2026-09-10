@@ -7,7 +7,7 @@ namespace XioCloudCSharp
 
         private void XioSchedulingEventsHandler(int index)
         {
-            var schedulingUi = _xioCloudRoomGui.Main.Scheduling;
+            var uiScheduling = _xioCloudRoomGui.Main.Scheduling;
             // Handle metadata changes from XiO Cloud Space slot
             switch (index)
             {
@@ -30,13 +30,13 @@ namespace XioCloudCSharp
                     IsOnDoNotDisturb = false;
                     break;
                 case XioCloudSpaceEventIds.CurrentMeetingStartTimeEventId:
-                    schedulingUi.CurrentReservationText_Indirect(ControllerXioCloudSpaceSlotDevice.Scheduling.CurrentMeetingStartTime.StringValue);
+                    uiScheduling.CurrentReservationText_Indirect(ControllerXioCloudSpaceSlotDevice.Scheduling.CurrentMeetingStartTime.StringValue);
                     break;
                 case XioCloudSpaceEventIds.CurrentMeetingStopTimeEventId:
-                    schedulingUi.CurrentReservationText_Indirect(ControllerXioCloudSpaceSlotDevice.Scheduling.CurrentMeetingStopTime.StringValue);
+                    uiScheduling.CurrentReservationText_Indirect(ControllerXioCloudSpaceSlotDevice.Scheduling.CurrentMeetingStopTime.StringValue);
                     break;
                 case XioCloudSpaceEventIds.NextMeetingStartTimeEventId:
-                    schedulingUi.CurrentReservationText_Indirect(ControllerXioCloudSpaceSlotDevice.Scheduling.NextMeetingStartTime.StringValue);
+                    uiScheduling.CurrentReservationText_Indirect(ControllerXioCloudSpaceSlotDevice.Scheduling.NextMeetingStartTime.StringValue);
                     break;
             }
         }

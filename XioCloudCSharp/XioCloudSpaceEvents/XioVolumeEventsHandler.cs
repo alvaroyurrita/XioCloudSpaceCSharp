@@ -7,12 +7,11 @@ namespace XioCloudCSharp
 
         private void XioVolumeEventsHandler(int eventId)
         {
-            var uiMain = _xioCloudRoomGui.Main;
-            var xioSystem = ControllerXioCloudSpaceSlotDevice;
+            var xioVolume = ControllerXioCloudSpaceSlotDevice.Volume;
             switch (eventId)
             {
                 case XioCloudSpaceEventIds.VolumeLevelEventId:
-                    VolumeLevel = xioSystem.Volume.VolumeLevel.UShortValue;
+                    VolumeLevel = xioVolume.VolumeLevel.UShortValue;
                     break;
                 case XioCloudSpaceEventIds.VolumeMuteOnEventId:
                     VolumeMuteState = true;

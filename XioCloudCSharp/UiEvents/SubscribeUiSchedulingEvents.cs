@@ -2,11 +2,11 @@
 {
     public partial class ControlSystem
     {
-        public void SubscribeSchedulingEvents()
+        public void SubscribeUiSchedulingEvents()
         {
-            var uiMain = _xioCloudRoomGui.Main;
+            var uiScheduling = _xioCloudRoomGui.Main.Scheduling;
             _logger.Debug("Subscribing to UI Main Scheduling events...");
-            uiMain.Scheduling.CheckedInToggle_PressEvent += (_, args) =>
+            uiScheduling.CheckedInToggle_PressEvent += (_, args) =>
             {
                 var state = args.Boolean();
                 _logger.Debug("CheckedInToggle_PressEvent. State {State}:", state);
@@ -17,7 +17,7 @@
                 }
             };
             
-            uiMain.Scheduling.DoNotDisturbeToggle_PressEvent += (_, args) =>
+            uiScheduling.DoNotDisturbeToggle_PressEvent += (_, args) =>
             {
                 var state = args.Boolean();
                 _logger.Debug("DoNotDisturbeToggle_PressEvent. State {State}:", state);
@@ -28,7 +28,7 @@
                 }
             };
             
-            uiMain.Scheduling.InScheduledEventToggle_PressEvent += (_, args) =>
+            uiScheduling.InScheduledEventToggle_PressEvent += (_, args) =>
             {
                 var state = args.Boolean();
                 _logger.Debug("InScheduledEventToggle_PressEvent. State {State}:", state);
@@ -39,7 +39,7 @@
                 }
             };
             
-            uiMain.Scheduling.SeriviceNeededToggle_PressEvent += (_, args) =>
+            uiScheduling.SeriviceNeededToggle_PressEvent += (_, args) =>
             {
                 var state = args.Boolean();
                 _logger.Debug("SeriviceNeededToggle_PressEvent. State {State}:", state);
@@ -50,14 +50,14 @@
                 }
             };
             
-            uiMain.Scheduling.CurrentReservationSlider_LowerTouchEvent += (_, args) =>
+            uiScheduling.CurrentReservationSlider_LowerTouchEvent += (_, args) =>
             {
                 var value = args.UShort();
                 _logger.Debug("CurrentReservationSlider_LowerTouchEvent. State {State}:", value);
                 CurrentReservation(value);
             };
             
-            uiMain.Scheduling.NextReservationSlider_LowerTouchEvent += (_, args) =>
+            uiScheduling.NextReservationSlider_LowerTouchEvent += (_, args) =>
             {
                 var value = args.UShort();
                 _logger.Debug("NextReservationSlider_LowerTouchEvent. State {State}:", value);

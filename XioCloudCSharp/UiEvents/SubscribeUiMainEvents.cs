@@ -11,8 +11,8 @@ namespace XioCloudCSharp
         {
             var uiMain = _xioCloudRoomGui.Main;
             var xioMain = ControllerXioCloudSpaceSlotDevice;
-            var currentAlertMessage = "";
-            var currentResolveAlertMessage = "";
+            var currentAlertMessage = string.Empty;
+            var currentResolveAlertMessage = string.Empty;
 
             _logger.Debug("Subscribing to UI Main events...");
 
@@ -94,8 +94,8 @@ namespace XioCloudCSharp
                 {
                     _logger.Debug("Sending alert message: {Message}", currentAlertMessage);
                     xioMain.AlertsFeedback.StringValue = currentAlertMessage;
-                    currentAlertMessage = "";
-                    uiMain.AlertMessage_IndirectText("");
+                    currentAlertMessage = string.Empty;
+                    uiMain.AlertMessage_IndirectText(currentAlertMessage);
                 }
             };
             
@@ -114,8 +114,8 @@ namespace XioCloudCSharp
                 {
                     _logger.Debug("Sending resolve alert message: {Message}", currentResolveAlertMessage);
                     xioMain.ResolveAlertsFeedback.StringValue = currentResolveAlertMessage;
-                    currentResolveAlertMessage = "";
-                    uiMain.ResolveAlertMessage_IndirectText("");
+                    currentResolveAlertMessage = string.Empty;
+                    uiMain.ResolveAlertMessage_IndirectText(currentResolveAlertMessage);
                 }
             };
                 
@@ -127,10 +127,10 @@ namespace XioCloudCSharp
                 {
                     _logger.Debug("Resolving all alerts...");
                     xioMain.ResolveAllAlertsFeedback.BoolValue = true;
-                    currentAlertMessage = "";
-                    uiMain.AlertMessage_IndirectText("");
-                    currentResolveAlertMessage = "";
-                    uiMain.ResolveAlertMessage_IndirectText("");
+                    currentAlertMessage = string.Empty;
+                    uiMain.AlertMessage_IndirectText(currentAlertMessage);
+                    currentResolveAlertMessage = string.Empty;
+                    uiMain.ResolveAlertMessage_IndirectText(currentResolveAlertMessage);
                 }
             };
         }

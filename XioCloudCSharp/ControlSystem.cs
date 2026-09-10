@@ -44,7 +44,8 @@ namespace XioCloudCSharp
             SubscribeUiSystemCheckEvents();
             SubscribeUiMainEvents();
             SubscribeUiVolumeEvents();
-            SubscribeSchedulingEvents();
+            SubscribeUiSchedulingEvents();
+            SubscribeUiLightsEvents();
         }
 
         public override void InitializeSystem()
@@ -64,93 +65,12 @@ namespace XioCloudCSharp
         private void XioCloudSpace_OnlineStatusChange(GenericBase currentDevice, OnlineOfflineEventArgs args)
         {
             _logger.Debug("XiO Cloud Space online status changed: IsOnline [{IsOnline}]", args.DeviceOnLine);
+            UpdateLightSceneName();
         }
 
         private string GetEventName(int eventId) =>
             _xioCloudSpaceEventNames.TryGetValue(eventId, out var eventName) ? eventName : "Unknown Event";
 
-        // private void TurnSystemPowerOn()
-        // {
-        //     // Send system power state to XiO
-        //     ControllerXioCloudRoomSlotDevice.SystemPowerFeedback.BoolValue = true;
-        // }
-        //
-        // private void TurnSystemPowerOff()
-        // {
-        //     // Send system power state to XiO
-        //     ControllerXioCloudRoomSlotDevice.SystemPowerFeedback.BoolValue = false;
-        // }
-        //
-        // private void TurnDisplayPowerOn()
-        // {
-        //     // Send display power state to XiO
-        //     ControllerXioCloudRoomSlotDevice.DisplayPowerFeedback.BoolValue = true;
-        // }
-        //
-        // private void TurnDisplayPowerOff()
-        // {
-        //     // Send display power state to XiO
-        //     ControllerXioCloudRoomSlotDevice.DisplayPowerFeedback.BoolValue = false;
-        // }
-        //
-        // private void HandleOccupiedEvent(bool value)
-        // {
-        //     const uint OccupiedStateJoin = 10;
-        //
-        //     _touchPanel.BooleanInput[OccupiedStateJoin].BoolValue = value;
-        // }
-        //
-        // private void HandleVacantEvent(bool value)
-        // {
-        //     const uint VacantStateJoin = 11;
-        //
-        //     _touchPanel.BooleanInput[VacantStateJoin].BoolValue = value;
-        // }
-        //
-        // private void HandleRoomNameEvent(string value)
-        // {
-        //     const uint RoomNameJoin = 12;
-        //
-        //     _touchPanel.StringInput[RoomNameJoin].StringValue = value;
-        // }
-        //
-        // private void HandleMaintenanceModeEvent(bool value)
-        // {
-        //     const uint MaintenanceModeJoin = 13;
-        //
-        //     if (value)
-        //     {
-        //         _touchPanel.StringInput[MaintenanceModeJoin].StringValue = "Room is in maintenance mode";
-        //     }
-        //     else
-        //     {
-        //         _touchPanel.StringInput[MaintenanceModeJoin].StringValue = "";
-        //     }
-        // }
-        //
-        // private void RunSystemCheck()
-        // {
-        //     ControllerXioCloudRoomSlotDevice.SystemCheckStateFeedback.Value = XioCloudRoomSlot.eSystemCheckState.Running;
-        //
-        //     if (_occSensor.IsOnline)
-        //     {
-        //         ControllerXioCloudRoomSlotDevice.SystemCheckStateFeedback.Value = XioCloudRoomSlot.eSystemCheckState.Success;
-        //     }
-        //     else
-        //     {
-        //         // SystemCheckMessageFeedback may be sent to provide details about system check
-        //         ControllerXioCloudRoomSlotDevice.SystemCheckMessageFeedback.StringValue = "Occupancy sensor offline";
-        //         ControllerXioCloudRoomSlotDevice.SystemCheckStateFeedback.Value = XioCloudRoomSlot.eSystemCheckState.Error;
-        //     }
-        // }
-        //
-        // public void OccSensor_PropertyChangeEventHandler(GenericBase device, BaseEventArgs args)
-        // {
-        //     if (args.EventId == GlsOccupancySensorBase.RoomOccupiedFeedbackEventId)
-        //     {
-        //         // Send occupancy state to XiO
-        //         ControllerXioCloudRoomSlotDevice.OccupiedFeedback.BoolValue = _occSensor.OccupancyDetectedFeedback.BoolValue;
-        //     }
-        // }
+        
     }
 }

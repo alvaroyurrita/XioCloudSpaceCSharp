@@ -6,7 +6,6 @@ namespace XioCloudCSharp
     {
         private void XioSystemEventsHandler(int eventId)
         {
-            var uiMain = _xioCloudRoomGui.Main;
             var xioSystem = ControllerXioCloudSpaceSlotDevice;
             switch (eventId)
             {
