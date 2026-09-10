@@ -29,7 +29,7 @@ namespace XioCloudCSharp
 
             // Register for XiO connection status change
             ControllerXioCloudSpaceSlotDevice.OnlineStatusChange += XioCloudSpace_OnlineStatusChange;
-            ControllerXioCloudRoomSlotDevice.Description = "XiO Cloud Room Slot Device";
+            ControllerXioCloudSpaceSlotDevice.Description = "XiO Cloud Space Slot Device";
             _xioCloudRoomGui = new XIOCloudRoomGUI.Contract();
             _logger.Debug("XiO Cloud Room GUI contract created");
             _touchPanel = new Ts1070(0x20, this);
@@ -40,8 +40,11 @@ namespace XioCloudCSharp
 
         public void SubscribeToUiEvents()
         {
+            SubscribeUiCallEvents();
             SubscribeUiSystemCheckEvents();
             SubscribeUiMainEvents();
+            SubscribeUiVolumeEvents();
+            SubscribeSchedulingEvents();
         }
 
         public override void InitializeSystem()

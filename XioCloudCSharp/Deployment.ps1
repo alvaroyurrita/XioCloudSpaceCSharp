@@ -101,7 +101,7 @@ switch ($Configuration) {
         If ($Env.Appliance.Address -eq "") {
             return
         };
-        Write-Output "Sending to $( $Env.Appliance.Address ) For $Configuration"
+        Write-Output "Sending to $( $Env.Appliance.Address ) to Slot $( $Env.Appliance.SlotNo ) For $Configuration"
         Write-Output "Do not stop debugging from IDE. Instead Kill the program at the processor using KILLPROG -P:{Slot}."
         Write-Output "Make sure that the processor is not on breakpoint mode when killing the program or the processor will lock up"
         Write-Output "Setting Debug Mode on processor for Port 50000 on all IP addresses"
@@ -114,7 +114,7 @@ switch ($Configuration) {
         If ($Env.Appliance.Address -eq "") {
             return
         };
-        Write-Output "Sending to $( $Env.Appliance.Address ) For $Configuration"
+        Write-Output "Sending to $( $Env.Appliance.Address ) to Slot $( $Env.Appliance.SlotNo ) For $Configuration"
         SendToAppliance
         Invoke-Expression "plink -pw $( $Env.Appliance.Password ) $( $Env.Appliance.UserName )@$( $Env.Appliance.Address ) -batch ""PROGLOAD -P:$( $Env.Appliance.SlotNo )"""
     }

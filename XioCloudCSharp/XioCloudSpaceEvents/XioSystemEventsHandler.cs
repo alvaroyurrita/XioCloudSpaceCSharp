@@ -4,7 +4,7 @@ namespace XioCloudCSharp
 {
     public partial class ControlSystem
     {
-        private void HandleSystemEvents(int eventId)
+        private void XioSystemEventsHandler(int eventId)
         {
             var uiMain = _xioCloudRoomGui.Main;
             var xioSystem = ControllerXioCloudSpaceSlotDevice;

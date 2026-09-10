@@ -39,5 +39,12 @@ namespace XioCloudCSharp
         
         public static string String(this UIEventArgs eventArgs) =>
             eventArgs.SigArgs.Event == eSigEvent.StringChange ? eventArgs.SigArgs.Sig.StringValue : string.Empty;
+
+        public static string DateGenerator(ushort index)
+        {
+            var now = System.DateTime.Now;
+            var future = now.AddHours(index);
+            return future.ToString("MM/dd/yyyy HH:mm:ss");
+        }
     }
 }

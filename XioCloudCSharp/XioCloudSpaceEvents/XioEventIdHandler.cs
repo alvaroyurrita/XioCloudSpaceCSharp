@@ -20,7 +20,7 @@ namespace XioCloudCSharp
                 case XioCloudSpaceEventIds.SpaceTypeEventId:
                 case XioCloudSpaceEventIds.SpaceDealerContactInfoEventId:
                 case XioCloudSpaceEventIds.SpaceTimeZoneEventId:
-                    HandleMetaDataEvents(args.EventId);
+                    XioMetaDataEventsHandler(args.EventId);
                     break;
                 case XioCloudSpaceEventIds.SystemPowerOnEventId:
                 case XioCloudSpaceEventIds.SystemPowerOffEventId:
@@ -31,7 +31,29 @@ namespace XioCloudCSharp
                 case XioCloudSpaceEventIds.SystemCheckEventId:
                 case XioCloudSpaceEventIds.MaintenanceModeEventId:
                 case XioCloudSpaceEventIds.PeopleCountEventId:
-                    HandleSystemEvents(args.EventId);
+                    XioSystemEventsHandler(args.EventId);
+                    break; 
+                case XioCloudSpaceEventIds.VolumeLevelEventId:
+                case XioCloudSpaceEventIds.VolumeMuteOnEventId:
+                case XioCloudSpaceEventIds.VolumeMuteOffEventId:
+                case XioCloudSpaceEventIds.MicrophonePrivacyOnEventId:
+                case XioCloudSpaceEventIds.MicrophonePrivacyOffEventId:
+                    XioVolumeEventsHandler(args.EventId); 
+                    break;
+                case XioCloudSpaceEventIds.InCallEventId:
+                case XioCloudSpaceEventIds.NotInCallEventId:
+                    XioCallEventHandler(args.EventId);
+                    break;
+                case XioCloudSpaceEventIds.InScheduledEventEventId:
+                case XioCloudSpaceEventIds.NotInScheduledEventEventId:
+                case XioCloudSpaceEventIds.CheckedInEventId:
+                case XioCloudSpaceEventIds.NotCheckedInEventId:
+                case XioCloudSpaceEventIds.DoNotDisturbOnEventId:
+                case XioCloudSpaceEventIds.DoNotDisturbOffEventId:
+                case XioCloudSpaceEventIds.CurrentMeetingStartTimeEventId:
+                case XioCloudSpaceEventIds.CurrentMeetingStopTimeEventId:
+                case XioCloudSpaceEventIds.NextMeetingStartTimeEventId:
+                    XioSchedulingEventsHandler(args.EventId);
                     break;
             }
         }

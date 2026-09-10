@@ -5,7 +5,7 @@ namespace XioCloudCSharp
     public partial class ControlSystem
     {
 
-        private void HandleMetaDataEvents(int index)
+        private void XioMetaDataEventsHandler(int index)
         {
             var metaData = ControllerXioCloudSpaceSlotDevice.MetaData;
             var metaDataUi = _xioCloudRoomGui.Main.MetaData;

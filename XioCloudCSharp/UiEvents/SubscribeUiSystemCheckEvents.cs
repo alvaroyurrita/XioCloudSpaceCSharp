@@ -24,7 +24,7 @@ namespace XioCloudCSharp
             };
             var currentSystemCheckMessage = "";
 
-            _logger.Debug("Subscribing to UI Main events...");
+            _logger.Debug("Subscribing to UI Main System Check events...");
             uiMain.CheckIdlePress_PressEvent += (_, args) =>
             {
                 var state = args.Boolean();
