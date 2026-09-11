@@ -71,6 +71,7 @@ namespace XioCloudCSharp
             UpdateLightSceneName();
             UpdateShadeSceneName();
             UpdateQuickActions();
+            ControllerXioCloudSpaceSlotDevice.MetaData.XpanelUrlFeedback.StringValue = "https://cp4-home/XIOCloudRoomGUI/index.html?ipid=20";
         }
 
         private string GetEventName(int eventId) =>
