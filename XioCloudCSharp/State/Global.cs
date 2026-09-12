@@ -81,5 +81,45 @@ namespace XioCloudCSharp
                 }
             }
         }
+
+        private ushort _currentSource;
+        public ushort CurrentSource
+        {
+            get => _currentSource;
+            set
+            {
+                if (_currentSource == value) return;
+                _logger.Debug("Current source changed. New source: {Source}", value);
+                _currentSource = value;
+                _xioCloudRoomGui.Main.CurrentSource_LowerTouchfb(_currentSource);
+                ControllerXioCloudSpaceSlotDevice.CurrentSourceFeedback.UShortValue = _currentSource;
+            }
+        }
+
+        private ushort _peopleCount;
+        public ushort PeopleCount
+        {
+            get => _peopleCount;
+            set
+            {
+                if (_peopleCount == value) return;
+                _logger.Debug("People count changed. New count: {Count}", value);
+                _peopleCount = value;
+                _xioCloudRoomGui.Main.PeopleCount_LowerTouchfb(_peopleCount);
+                ControllerXioCloudSpaceSlotDevice.PeopleCountFeedback.UShortValue = _peopleCount;
+            }
+        }
+        
+        public void SendAlertMessage(string message)
+        {
+            _logger.Debug("Sending alert message: {Message}", message);
+            ControllerXioCloudSpaceSlotDevice.AlertsFeedback.StringValue = message;
+        }
+        
+        public void ResolveAlertMessage(string message)
+        {
+            _logger.Debug("Sending alert message: {Message}", message);
+            ControllerXioCloudSpaceSlotDevice.ResolveAlertsFeedback.StringValue = message;
+        }
     }
 }

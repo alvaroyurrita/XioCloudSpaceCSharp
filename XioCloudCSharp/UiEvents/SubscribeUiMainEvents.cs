@@ -66,8 +66,7 @@ namespace XioCloudCSharp
             {
                 var state = args.UShort();
                 _logger.Debug("CurrentSource_LowerTouchEvent. State {State}:", state);
-                uiMain.CurrentSource_LowerTouchfb(state);
-                xioMain.CurrentSourceFeedback.UShortValue = state;
+                CurrentSource = state;
             };
             
             
@@ -75,8 +74,7 @@ namespace XioCloudCSharp
             {
                 var state = args.UShort();
                 _logger.Debug("PeopleCount_LowerTouchEvent. State {State}:", state);
-                uiMain.PeopleCount_LowerTouchfb(state);
-                xioMain.PeopleCountFeedback.UShortValue = state;
+                PeopleCount = state;
             };
             
             uiMain.AlertMessage_OutputTextEvent += (_, args) =>
@@ -93,7 +91,7 @@ namespace XioCloudCSharp
                 if (state)
                 {
                     _logger.Debug("Sending alert message: {Message}", currentAlertMessage);
-                    xioMain.AlertsFeedback.StringValue = currentAlertMessage;
+                    SendAlertMessage(currentAlertMessage);
                     currentAlertMessage = string.Empty;
                     uiMain.AlertMessage_IndirectText(currentAlertMessage);
                 }
@@ -113,7 +111,7 @@ namespace XioCloudCSharp
                 if (state)
                 {
                     _logger.Debug("Sending resolve alert message: {Message}", currentResolveAlertMessage);
-                    xioMain.ResolveAlertsFeedback.StringValue = currentResolveAlertMessage;
+                    ResolveAlertMessage(currentResolveAlertMessage);
                     currentResolveAlertMessage = string.Empty;
                     uiMain.ResolveAlertMessage_IndirectText(currentResolveAlertMessage);
                 }
