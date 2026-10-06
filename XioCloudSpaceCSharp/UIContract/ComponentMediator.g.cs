@@ -4,7 +4,7 @@
 //     AppHost:     2.1501.15.0
 //     UI Plugin:   1.4801.18.0
 //
-//     Project:     XIO Cloud Room GUI
+//     Project:     XioCloudSpaceConstruct
 //     Version:     1.0.0.0
 //     Sdk:         CH5:2.18.0
 //     Strategy:    Modern
@@ -21,7 +21,7 @@ using System.Globalization;
 using Crestron.SimplSharp;
 using Crestron.SimplSharpPro;
 
-namespace XIOCloudRoomGUI
+namespace XioCloudSpaceConstruct
 {
     /// <summary>
     /// Crestron class to wire up signals to and from the panel.

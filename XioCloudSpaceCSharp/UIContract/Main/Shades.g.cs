@@ -4,7 +4,7 @@
 //     AppHost:     2.1501.15.0
 //     UI Plugin:   1.4801.18.0
 //
-//     Project:     XIO Cloud Room GUI
+//     Project:     XioCloudSpaceConstruct
 //     Version:     1.0.0.0
 //     Sdk:         CH5:2.18.0
 //     Strategy:    PageStrategy
@@ -21,9 +21,9 @@ using System.Linq;
 using Crestron.SimplSharp;
 using Crestron.SimplSharpPro;
 using Crestron.SimplSharpPro.DeviceSupport;
-using XIOCloudRoomGUI;
+using XioCloudSpaceConstruct;
 
-namespace XIOCloudRoomGUI.Main
+namespace XioCloudSpaceConstruct.Main
 {
 
     /// <summary>

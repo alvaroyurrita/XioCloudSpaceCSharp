@@ -4,7 +4,7 @@ using Serilog;
 using Serilog.Core;
 using Serilog.Crestron.Sinks;
 using System.Collections.Generic;
-using XIOCloudRoomGUI;
+using XioCloudSpaceConstruct;
 
 namespace XioCloudSpaceCSharp
 {
@@ -30,7 +30,7 @@ namespace XioCloudSpaceCSharp
             // Register for XiO connection status change
             ControllerXioCloudSpaceSlotDevice.OnlineStatusChange += XioCloudSpace_OnlineStatusChange;
             ControllerXioCloudSpaceSlotDevice.Description = "XiO Cloud Space Slot Device";
-            _xioCloudRoomGui = new XIOCloudRoomGUI.Contract();
+            _xioCloudRoomGui = new XioCloudSpaceConstruct.Contract();
             _logger.Debug("XiO Cloud Room GUI contract created");
             _touchPanel = new Ts1070(0x20, this);
             _xioCloudRoomGui.AddDevice(_touchPanel);
@@ -71,7 +71,7 @@ namespace XioCloudSpaceCSharp
             UpdateLightSceneName();
             UpdateShadeSceneName();
             UpdateQuickActions();
-            ControllerXioCloudSpaceSlotDevice.MetaData.XpanelUrlFeedback.StringValue = "https://cp4-home/XIOCloudRoomGUI/index.html?ipid=20";
+            ControllerXioCloudSpaceSlotDevice.MetaData.XpanelUrlFeedback.StringValue = "https://cp4-home/XioCloudSpaceConstruct/index.html?ipid=20";
         }
 
         private string GetEventName(int eventId) =>

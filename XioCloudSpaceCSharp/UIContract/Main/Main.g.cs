@@ -4,7 +4,7 @@
 //     AppHost:     2.1501.15.0
 //     UI Plugin:   1.4801.18.0
 //
-//     Project:     XIO Cloud Room GUI
+//     Project:     XioCloudSpaceConstruct
 //     Version:     1.0.0.0
 //     Sdk:         CH5:2.18.0
 //     Strategy:    PageStrategy
@@ -21,9 +21,9 @@ using System.Linq;
 using Crestron.SimplSharp;
 using Crestron.SimplSharpPro;
 using Crestron.SimplSharpPro.DeviceSupport;
-using XIOCloudRoomGUI;
+using XioCloudSpaceConstruct;
 
-namespace XIOCloudRoomGUI.Main
+namespace XioCloudSpaceConstruct.Main
 {
 
     /// <summary>
@@ -402,42 +402,42 @@ namespace XIOCloudRoomGUI.Main
         /// <summary>
         /// ComplexComponent Volume
         /// </summary>
-        XIOCloudRoomGUI.Main.IVolume Volume { get; }
+        XioCloudSpaceConstruct.Main.IVolume Volume { get; }
 
         /// <summary>
         /// ComplexComponent Call
         /// </summary>
-        XIOCloudRoomGUI.Main.ICall Call { get; }
+        XioCloudSpaceConstruct.Main.ICall Call { get; }
 
         /// <summary>
         /// ComplexComponent MetaData
         /// </summary>
-        XIOCloudRoomGUI.Main.IMetaData MetaData { get; }
+        XioCloudSpaceConstruct.Main.IMetaData MetaData { get; }
 
         /// <summary>
         /// ComplexComponent Lights
         /// </summary>
-        XIOCloudRoomGUI.Main.ILights Lights { get; }
+        XioCloudSpaceConstruct.Main.ILights Lights { get; }
 
         /// <summary>
         /// ComplexComponent Shades
         /// </summary>
-        XIOCloudRoomGUI.Main.IShades Shades { get; }
+        XioCloudSpaceConstruct.Main.IShades Shades { get; }
 
         /// <summary>
         /// ComplexComponent Scheduling
         /// </summary>
-        XIOCloudRoomGUI.Main.IScheduling Scheduling { get; }
+        XioCloudSpaceConstruct.Main.IScheduling Scheduling { get; }
 
         /// <summary>
         /// ComplexComponent QuickActions
         /// </summary>
-        XIOCloudRoomGUI.Main.IQuickActions QuickActions { get; }
+        XioCloudSpaceConstruct.Main.IQuickActions QuickActions { get; }
 
         /// <summary>
         /// ComplexComponent Climate
         /// </summary>
-        XIOCloudRoomGUI.Main.IClimate Climate { get; }
+        XioCloudSpaceConstruct.Main.IClimate Climate { get; }
     }
 
     /// <summary>
@@ -810,14 +810,14 @@ namespace XIOCloudRoomGUI.Main
             ComponentMediator.ConfigureStringEvent(controlJoinId, Joins.Strings.AlertMessage_OutputTextEvent, onAlertMessage_OutputText);
             ComponentMediator.ConfigureStringEvent(controlJoinId, Joins.Strings.ResolveAlertMessage_OutputTextEvent, onResolveAlertMessage_OutputText);
             ComponentMediator.ConfigureStringEvent(controlJoinId, Joins.Strings.SystemCheckMessage_OutputTextEvent, onSystemCheckMessage_OutputText);
-            Volume = new XIOCloudRoomGUI.Main.Volume(ComponentMediator, 2);
-            Call = new XIOCloudRoomGUI.Main.Call(ComponentMediator, 3);
-            MetaData = new XIOCloudRoomGUI.Main.MetaData(ComponentMediator, 4);
-            Lights = new XIOCloudRoomGUI.Main.Lights(ComponentMediator, 5);
-            Shades = new XIOCloudRoomGUI.Main.Shades(ComponentMediator, 6);
-            Scheduling = new XIOCloudRoomGUI.Main.Scheduling(ComponentMediator, 7);
-            QuickActions = new XIOCloudRoomGUI.Main.QuickActions(ComponentMediator, 8);
-            Climate = new XIOCloudRoomGUI.Main.Climate(ComponentMediator, 9);
+            Volume = new XioCloudSpaceConstruct.Main.Volume(ComponentMediator, 2);
+            Call = new XioCloudSpaceConstruct.Main.Call(ComponentMediator, 3);
+            MetaData = new XioCloudSpaceConstruct.Main.MetaData(ComponentMediator, 4);
+            Lights = new XioCloudSpaceConstruct.Main.Lights(ComponentMediator, 5);
+            Shades = new XioCloudSpaceConstruct.Main.Shades(ComponentMediator, 6);
+            Scheduling = new XioCloudSpaceConstruct.Main.Scheduling(ComponentMediator, 7);
+            QuickActions = new XioCloudSpaceConstruct.Main.QuickActions(ComponentMediator, 8);
+            Climate = new XioCloudSpaceConstruct.Main.Climate(ComponentMediator, 9);
         }
 
         public void AddDevice(BasicTriListWithSmartObject device)
@@ -825,21 +825,21 @@ namespace XIOCloudRoomGUI.Main
             Devices.Add(device);
             ComponentMediator.HookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
 
-            ((XIOCloudRoomGUI.Main.Volume)Volume).AddDevice(device);
+            ((XioCloudSpaceConstruct.Main.Volume)Volume).AddDevice(device);
 
-            ((XIOCloudRoomGUI.Main.Call)Call).AddDevice(device);
+            ((XioCloudSpaceConstruct.Main.Call)Call).AddDevice(device);
 
-            ((XIOCloudRoomGUI.Main.MetaData)MetaData).AddDevice(device);
+            ((XioCloudSpaceConstruct.Main.MetaData)MetaData).AddDevice(device);
 
-            ((XIOCloudRoomGUI.Main.Lights)Lights).AddDevice(device);
+            ((XioCloudSpaceConstruct.Main.Lights)Lights).AddDevice(device);
 
-            ((XIOCloudRoomGUI.Main.Shades)Shades).AddDevice(device);
+            ((XioCloudSpaceConstruct.Main.Shades)Shades).AddDevice(device);
 
-            ((XIOCloudRoomGUI.Main.Scheduling)Scheduling).AddDevice(device);
+            ((XioCloudSpaceConstruct.Main.Scheduling)Scheduling).AddDevice(device);
 
-            ((XIOCloudRoomGUI.Main.QuickActions)QuickActions).AddDevice(device);
+            ((XioCloudSpaceConstruct.Main.QuickActions)QuickActions).AddDevice(device);
 
-            ((XIOCloudRoomGUI.Main.Climate)Climate).AddDevice(device);
+            ((XioCloudSpaceConstruct.Main.Climate)Climate).AddDevice(device);
         }
 
         public void RemoveDevice(BasicTriListWithSmartObject device)
@@ -847,21 +847,21 @@ namespace XIOCloudRoomGUI.Main
             Devices.Remove(device);
             ComponentMediator.UnHookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
 
-        ((XIOCloudRoomGUI.Main.Volume)Volume).RemoveDevice(device);
+        ((XioCloudSpaceConstruct.Main.Volume)Volume).RemoveDevice(device);
 
-        ((XIOCloudRoomGUI.Main.Call)Call).RemoveDevice(device);
+        ((XioCloudSpaceConstruct.Main.Call)Call).RemoveDevice(device);
 
-        ((XIOCloudRoomGUI.Main.MetaData)MetaData).RemoveDevice(device);
+        ((XioCloudSpaceConstruct.Main.MetaData)MetaData).RemoveDevice(device);
 
-        ((XIOCloudRoomGUI.Main.Lights)Lights).RemoveDevice(device);
+        ((XioCloudSpaceConstruct.Main.Lights)Lights).RemoveDevice(device);
 
-        ((XIOCloudRoomGUI.Main.Shades)Shades).RemoveDevice(device);
+        ((XioCloudSpaceConstruct.Main.Shades)Shades).RemoveDevice(device);
 
-        ((XIOCloudRoomGUI.Main.Scheduling)Scheduling).RemoveDevice(device);
+        ((XioCloudSpaceConstruct.Main.Scheduling)Scheduling).RemoveDevice(device);
 
-        ((XIOCloudRoomGUI.Main.QuickActions)QuickActions).RemoveDevice(device);
+        ((XioCloudSpaceConstruct.Main.QuickActions)QuickActions).RemoveDevice(device);
 
-        ((XIOCloudRoomGUI.Main.Climate)Climate).RemoveDevice(device);
+        ((XioCloudSpaceConstruct.Main.Climate)Climate).RemoveDevice(device);
         }
 
         #endregion
@@ -1355,42 +1355,42 @@ namespace XIOCloudRoomGUI.Main
         /// <summary>
         /// ComplexComponent Volume
         /// </summary>
-        public XIOCloudRoomGUI.Main.IVolume Volume { get; private set; }
+        public XioCloudSpaceConstruct.Main.IVolume Volume { get; private set; }
 
         /// <summary>
         /// ComplexComponent Call
         /// </summary>
-        public XIOCloudRoomGUI.Main.ICall Call { get; private set; }
+        public XioCloudSpaceConstruct.Main.ICall Call { get; private set; }
 
         /// <summary>
         /// ComplexComponent MetaData
         /// </summary>
-        public XIOCloudRoomGUI.Main.IMetaData MetaData { get; private set; }
+        public XioCloudSpaceConstruct.Main.IMetaData MetaData { get; private set; }
 
         /// <summary>
         /// ComplexComponent Lights
         /// </summary>
-        public XIOCloudRoomGUI.Main.ILights Lights { get; private set; }
+        public XioCloudSpaceConstruct.Main.ILights Lights { get; private set; }
 
         /// <summary>
         /// ComplexComponent Shades
         /// </summary>
-        public XIOCloudRoomGUI.Main.IShades Shades { get; private set; }
+        public XioCloudSpaceConstruct.Main.IShades Shades { get; private set; }
 
         /// <summary>
         /// ComplexComponent Scheduling
         /// </summary>
-        public XIOCloudRoomGUI.Main.IScheduling Scheduling { get; private set; }
+        public XioCloudSpaceConstruct.Main.IScheduling Scheduling { get; private set; }
 
         /// <summary>
         /// ComplexComponent QuickActions
         /// </summary>
-        public XIOCloudRoomGUI.Main.IQuickActions QuickActions { get; private set; }
+        public XioCloudSpaceConstruct.Main.IQuickActions QuickActions { get; private set; }
 
         /// <summary>
         /// ComplexComponent Climate
         /// </summary>
-        public XIOCloudRoomGUI.Main.IClimate Climate { get; private set; }
+        public XioCloudSpaceConstruct.Main.IClimate Climate { get; private set; }
 
         #endregion
 

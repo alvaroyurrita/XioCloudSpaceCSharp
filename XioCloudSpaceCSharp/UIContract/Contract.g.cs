@@ -4,7 +4,7 @@
 //     AppHost:     2.1501.15.0
 //     UI Plugin:   1.4801.18.0
 //
-//     Project:     XIO Cloud Room GUI
+//     Project:     XioCloudSpaceConstruct
 //     Version:     1.0.0.0
 //     Sdk:         CH5:2.18.0
 //     Strategy:    Modern
@@ -22,7 +22,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace XIOCloudRoomGUI
+namespace XioCloudSpaceConstruct
 {
     /// <summary>
     /// Common Interface for Root Contracts.
@@ -48,8 +48,8 @@ namespace XIOCloudRoomGUI
 
         private ComponentMediator ComponentMediator { get; set; }
 
-        public XIOCloudRoomGUI.Main.IMain Main { get { return (XIOCloudRoomGUI.Main.IMain)InternalMain; } }
-        private XIOCloudRoomGUI.Main.Main InternalMain { get; set; }
+        public XioCloudSpaceConstruct.Main.IMain Main { get { return (XioCloudSpaceConstruct.Main.IMain)InternalMain; } }
+        private XioCloudSpaceConstruct.Main.Main InternalMain { get; set; }
 
         #endregion
 
@@ -73,7 +73,7 @@ namespace XIOCloudRoomGUI
             ComponentMediator = new ComponentMediator();
             ComponentMediator.ConfigureActivityEvent(onActivity);
 
-            InternalMain = new XIOCloudRoomGUI.Main.Main(ComponentMediator, 1);
+            InternalMain = new XioCloudSpaceConstruct.Main.Main(ComponentMediator, 1);
 
 
             for (int index = 0; index < devices.Length; index++)
