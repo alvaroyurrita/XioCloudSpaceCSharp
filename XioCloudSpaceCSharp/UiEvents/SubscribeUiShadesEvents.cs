@@ -46,7 +46,8 @@ namespace XioCloudSpaceCSharp
             {
                 if (! string.IsNullOrEmpty(currentShadeSceneName))
                 {
-                   xioShades.ActiveShadeSceneName.StringValue = currentShadeSceneName;
+                    //TODO: Set the ActiveShadeSceneName in XIO Cloud before clearing the UI
+
                    currentShadeSceneName = string.Empty;
                    uiShades.ShadesSceneNameText_IndirectText(currentShadeSceneName);
                 }

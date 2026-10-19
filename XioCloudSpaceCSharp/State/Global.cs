@@ -113,13 +113,13 @@ namespace XioCloudSpaceCSharp
         public void SendAlertMessage(string message)
         {
             _logger.Debug("Sending alert message: {Message}", message);
-            ControllerXioCloudSpaceSlotDevice.AlertsFeedback.StringValue = message;
+            // TODO: Update the feedback state in the XioCloudSpaceSlotDevice
         }
         
         public void ResolveAlertMessage(string message)
         {
             _logger.Debug("Sending alert message: {Message}", message);
-            ControllerXioCloudSpaceSlotDevice.ResolveAlertsFeedback.StringValue = message;
+            // TODO: Update the feedback state in the XioCloudSpaceSlotDevice
         }
     }
 }

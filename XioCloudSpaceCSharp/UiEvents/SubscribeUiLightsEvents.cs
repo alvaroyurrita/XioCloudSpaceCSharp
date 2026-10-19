@@ -46,7 +46,8 @@ namespace XioCloudSpaceCSharp
             {
                 if (! string.IsNullOrEmpty(currentLightSceneName))
                 {
-                   xioLights.ActiveLightSceneName.StringValue = currentLightSceneName;
+                    //TODO: Set the ActiveLightSceneName in XIO Cloud before clearing the UI
+                    
                    currentLightSceneName = string.Empty;
                    uiLights.LightsSceneNameText_IndirectText(currentLightSceneName);
                 }

@@ -4,19 +4,10 @@ namespace XioCloudSpaceCSharp
 {
     public partial class ControlSystem
     {
+        // TODO: Handle call events from XiO Cloud Space
         private void XioCallEventHandler(int eventId)
         {
-            switch (eventId)
-            {
-                case XioCloudSpaceEventIds.InCallEventId:
-                    _logger.Debug("In call event received");
-                    IsInCall = true;
-                    break;
-                case XioCloudSpaceEventIds.NotInCallEventId:
-                    _logger.Debug("Not in call event received");
-                    IsInCall = false;
-                    break;
-            }
+
         }
     }
 }

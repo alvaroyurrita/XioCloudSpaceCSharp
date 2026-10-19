@@ -14,8 +14,8 @@ namespace XioCloudSpaceCSharp
                 if (_isCheckedIn == value) return;
                 _logger.Debug("Checked in state changed. New state: {State}", value);
                 _isCheckedIn = value;
-                ControllerXioCloudSpaceSlotDevice.Scheduling.CheckedInFeedback.BoolValue = _isCheckedIn;
                 _xioCloudRoomGui.Main.Scheduling.CheckedInToggle_Selected(_isCheckedIn);
+                // TODO: Update the Checked In feedback value in the XIO
             }
         }
 
@@ -28,8 +28,7 @@ namespace XioCloudSpaceCSharp
                 if (_isOnDoNotDisturb == value) return;
                 _logger.Debug("Do Not Disturb state changed. New state: {State}", value);
                 _isOnDoNotDisturb = value;
-                ControllerXioCloudSpaceSlotDevice.Scheduling.DoNotDisturbFeedback.BoolValue = _isOnDoNotDisturb;
-                _xioCloudRoomGui.Main.Scheduling.DoNotDisturbeToggle_Selected(_isOnDoNotDisturb);
+                //TODO: Update the Do Not Disturb feedback value in the XIO
             }
         }
 
@@ -42,8 +41,8 @@ namespace XioCloudSpaceCSharp
                 if (_isInScheduledEvent == value) return;
                 _logger.Debug("In scheduled event state changed. New state: {State}", value);
                 _isInScheduledEvent = value;
-                ControllerXioCloudSpaceSlotDevice.Scheduling.InScheduledEventFeedback.BoolValue = _isInScheduledEvent;
                 _xioCloudRoomGui.Main.Scheduling.InScheduledEventToggle_Selected(_isInScheduledEvent);
+                // TODO: Update the In Scheduled Event feedback value in the XIO
             }
         }
 
@@ -56,27 +55,23 @@ namespace XioCloudSpaceCSharp
                 if (_isInServiceNeeded == value) return;
                 _logger.Debug("In service needed state changed. New state: {State}", value);
                 _isInServiceNeeded = value;
-                ControllerXioCloudSpaceSlotDevice.Scheduling.ServiceNeededFeedback.BoolValue = _isInServiceNeeded;
                 _xioCloudRoomGui.Main.Scheduling.SeriviceNeededToggle_Selected(_isInServiceNeeded);
+                // TODO: Update the In Service Needed feedback value in the XIO
             }
         }
 
         private void CurrentReservation(ushort index)
         {
-            ControllerXioCloudSpaceSlotDevice.Scheduling.CurrentMeetingStartTimeFeedback.StringValue =
-                HelperClasses.DateGenerator(index);
-            ControllerXioCloudSpaceSlotDevice.Scheduling.CurrentMeetingStopTimeFeedback.StringValue =
-                HelperClasses.DateGenerator((ushort)(index + 1));
             _xioCloudRoomGui.Main.Scheduling.CurrentReservationText_Indirect(HelperClasses.DateGenerator(index));
             _xioCloudRoomGui.Main.Scheduling.CurrentReservationSlider_LowerTouchfb(index);
+            // TODO: Update the Current Reservation feedback values in XIO
         }
 
         private void NextReservation(ushort index)
         {
-            ControllerXioCloudSpaceSlotDevice.Scheduling.NextMeetingStartTimeFeedback.StringValue =
-                HelperClasses.DateGenerator(index);
             _xioCloudRoomGui.Main.Scheduling.NextReservation_Indirect(HelperClasses.DateGenerator(index));
             _xioCloudRoomGui.Main.Scheduling.NextReservationSlider_LowerTouchfb(index);
+            // TODO: Update the Next Reservation feedback values in XIO
         }
     }
 }

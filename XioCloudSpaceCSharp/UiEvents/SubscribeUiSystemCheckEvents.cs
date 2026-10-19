@@ -92,7 +92,7 @@ namespace XioCloudSpaceCSharp
                 _logger.Debug("SendSystemCheckMessage_PressEvent. State {State}:", state);
                 if (state)
                 {
-                    xioMain.SystemCheckMessageFeedback.StringValue = currentSystemCheckMessage;
+                    //TODO: Send the currentSystemCheckMessage to XIO Cloud 
                 }
             };
             return;

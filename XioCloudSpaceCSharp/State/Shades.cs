@@ -7,19 +7,14 @@ namespace XioCloudSpaceCSharp
     {
         private void ClearAllShadesScenes()
         {
-            ControllerXioCloudSpaceSlotDevice.Shades.ShadesClosedSceneFeedback.BoolValue = false;
-            ControllerXioCloudSpaceSlotDevice.Shades.AnyShadeOpenFeedback.BoolValue = false;
-            ControllerXioCloudSpaceSlotDevice.Shades.ShadeSceneFeedbacks[2].BoolValue = false;
-            ControllerXioCloudSpaceSlotDevice.Shades.ShadeSceneFeedbacks[3].BoolValue = false;
-            ControllerXioCloudSpaceSlotDevice.Shades.ShadeSceneFeedbacks[4].BoolValue = false;
-            ControllerXioCloudSpaceSlotDevice.Shades.ShadeSceneFeedbacks[5].BoolValue = false;
-            ControllerXioCloudSpaceSlotDevice.Shades.ShadesOpenSceneFeedback.BoolValue = false;
             _xioCloudRoomGui.Main.Shades.ShadesScene1_Selected(false);
             _xioCloudRoomGui.Main.Shades.ShadesScene2_Selected(false);
             _xioCloudRoomGui.Main.Shades.ShadesScene3_Selected(false);
             _xioCloudRoomGui.Main.Shades.ShadesScene4_Selected(false);
             _xioCloudRoomGui.Main.Shades.ShadesScene5_Selected(false);
             _xioCloudRoomGui.Main.Shades.ShadesScene6_Selected(false);
+            // TODO: Clear XIO feedbacks for shades scenes
+
         }
 
         private ushort _currentShadeScene;
@@ -35,34 +30,28 @@ namespace XioCloudSpaceCSharp
                 switch (_currentShadeScene)
                 {
                     case 1:
-                        ControllerXioCloudSpaceSlotDevice.Shades.ShadesOpenSceneFeedback.BoolValue = true;
-                        ControllerXioCloudSpaceSlotDevice.Shades.AnyShadeOpenFeedback.BoolValue = true;
                         _xioCloudRoomGui.Main.Shades.ShadesScene1_Selected(true);
+                        //TODO: Set XIO Shade feedbacks for scene 1
                         break;
                     case 2:
-                        ControllerXioCloudSpaceSlotDevice.Shades.ShadeSceneFeedbacks[2].BoolValue = true;
-                        ControllerXioCloudSpaceSlotDevice.Shades.AnyShadeOpenFeedback.BoolValue = true;
                         _xioCloudRoomGui.Main.Shades.ShadesScene2_Selected(true);
+                        //TODO: Set XIO Shade feedbacks for scene 2
                         break;
                     case 3:
-                        ControllerXioCloudSpaceSlotDevice.Shades.ShadeSceneFeedbacks[3].BoolValue = true;
-                        ControllerXioCloudSpaceSlotDevice.Shades.AnyShadeOpenFeedback.BoolValue = true;
                         _xioCloudRoomGui.Main.Shades.ShadesScene3_Selected(true);
+                        //TODO: Set XIO Shade feedbacks for scene 3
                         break;
                     case 4:
-                        ControllerXioCloudSpaceSlotDevice.Shades.ShadeSceneFeedbacks[4].BoolValue = true;
-                        ControllerXioCloudSpaceSlotDevice.Shades.AnyShadeOpenFeedback.BoolValue = true;
                         _xioCloudRoomGui.Main.Shades.ShadesScene4_Selected(true);
+                        //TODO: Set XIO Shade feedbacks for scene 4
                         break;
                     case 5:
-                        ControllerXioCloudSpaceSlotDevice.Shades.ShadeSceneFeedbacks[5].BoolValue = true;
-                        ControllerXioCloudSpaceSlotDevice.Shades.AnyShadeOpenFeedback.BoolValue = true;
                         _xioCloudRoomGui.Main.Shades.ShadesScene5_Selected(true);
+                        //TODO: Set XIO Shade feedbacks for scene 5
                         break;
                     case 6:
-                        ControllerXioCloudSpaceSlotDevice.Shades.ShadesClosedSceneFeedback.BoolValue = true;
-                        ControllerXioCloudSpaceSlotDevice.Shades.AnyShadeOpenFeedback.BoolValue = false;
                         _xioCloudRoomGui.Main.Shades.ShadesScene6_Selected(true);
+                        //TODO: Set XIO Shade feedbacks for scene 6
                         break;
                     default:
                         break;
@@ -88,22 +77,22 @@ namespace XioCloudSpaceCSharp
                 case 2:
                     ShadeSceneNames[2] = name;
                     _xioCloudRoomGui.Main.Shades.ShadesScene2_Serial_CIP(name);
-                    ControllerXioCloudSpaceSlotDevice.Shades.ShadeSceneNames[2].StringValue = name;
+                    //TODO: Update XIO feedback for shade scene 2 name
                     break;
                 case 3:
                     ShadeSceneNames[3] = name;
                     _xioCloudRoomGui.Main.Shades.ShadesScene3_Serial_CIP(name);
-                    ControllerXioCloudSpaceSlotDevice.Shades.ShadeSceneNames[3].StringValue = name;
+                    //TODO: Update XIO feedback for shade scene 3 name
                     break;
                 case 4:
                     ShadeSceneNames[4] = name;
                     _xioCloudRoomGui.Main.Shades.ShadesScene4_Serial_CIP(name);
-                    ControllerXioCloudSpaceSlotDevice.Shades.ShadeSceneNames[4].StringValue = name;
+                    //TODO: Update XIO feedback for shade scene 4 name
                     break;
                 case 5:
                     ShadeSceneNames[5] = name;
                     _xioCloudRoomGui.Main.Shades.ShadesScene5_Serial_CIP(name);
-                    ControllerXioCloudSpaceSlotDevice.Shades.ShadeSceneNames[5].StringValue = name;
+                    //TODO: Update XIO feedback for shade scene 5 name
                     break;
             }
         }

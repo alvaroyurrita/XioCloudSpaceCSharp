@@ -17,6 +17,7 @@ namespace XioCloudSpaceCSharp
 
         public ControlSystem()
         {
+            //Logger configuration
             _logger = new LoggerConfiguration()
                 .MinimumLevel.Debug()
                 .WriteTo.CrestronConsole(
@@ -26,10 +27,10 @@ namespace XioCloudSpaceCSharp
 
             // Register for incoming signals from XiO
             ControllerXioCloudSpaceSlotDevice.BaseEvent += XioEvenIdHandler;
-
-            // Register for XiO connection status change
+            // Register for XiO online status change
             ControllerXioCloudSpaceSlotDevice.OnlineStatusChange += XioCloudSpace_OnlineStatusChange;
-            ControllerXioCloudSpaceSlotDevice.Description = "XiO Cloud Space Slot Device";
+
+            // Create the XiO Cloud Room GUI contract and add the touch panel to it
             _xioCloudRoomGui = new XioCloudSpaceConstruct.Contract();
             _logger.Debug("XiO Cloud Room GUI contract created");
             _touchPanel = new Ts1070(0x20, this);
@@ -52,16 +53,13 @@ namespace XioCloudSpaceCSharp
 
         public override void InitializeSystem()
         {
-            // Register the CloudRoom slot with XiO; by default all signals on the slot are registered with XiO
-            // Signals may be passed here to exclude their registration with XiO
-            if (ControllerXioCloudSpaceSlotDevice.Register() == eDeviceRegistrationUnRegistrationResponse.Success)
-            {
-                // AlertsFeedback may be sent at any time
-                _logger.Debug("XiO Cloud Space slot registered successfully");
-                ControllerXioCloudSpaceSlotDevice.AlertsFeedback.StringValue = "SIMPL# Program has started";
-            }
+            //TODO:  Register the CloudRoom slot with XiO; by default all signals on the slot are registered with XiO
 
+
+            //Register the Touch Panel
             _touchPanel.Register();
+
+            //Initialize Climate Values
             InitializeClimate();
         }
 

@@ -15,7 +15,7 @@ namespace XioCloudSpaceCSharp
                 _logger.Debug("Volume mute state changed. New state: {State}", value);
                 _volumeMuteState = value;
                 _xioCloudRoomGui.Main.Volume.VolumeMuteToggle_Selected(VolumeMuteState);
-                ControllerXioCloudSpaceSlotDevice.Volume.VolumeMuteFeedback.BoolValue = VolumeMuteState;
+                //TODO: Set the XIO feedback for Volume Mute state
             }
         }
 
@@ -29,7 +29,7 @@ namespace XioCloudSpaceCSharp
                 _logger.Debug("Microphone private state changed. New state: {State}", value);
                 _microphonePrivateState = value;
                 _xioCloudRoomGui.Main.Volume.MicrophoneToggle_Selected(MicrophonePrivateState);
-                ControllerXioCloudSpaceSlotDevice.Volume.MicrophonePrivacyFeedback.BoolValue = MicrophonePrivateState;
+                //TODO: Set the XIO feedback for Microphone Privacy state
             }
         }
         private ushort _volumeLevel;
@@ -42,7 +42,7 @@ namespace XioCloudSpaceCSharp
                 _logger.Debug("Volume level changed. New level: {Level}", value);
                 _volumeLevel = value;
                 _xioCloudRoomGui.Main.Volume.VolumeLevel_LowerTouchfb(VolumeLevel);
-                ControllerXioCloudSpaceSlotDevice.Volume.VolumeLevelFeedback.UShortValue = VolumeLevel;
+                //TODO: Set the XIO feedback for Volume Level
             }
         }
     }

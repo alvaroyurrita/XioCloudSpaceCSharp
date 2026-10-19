@@ -11,7 +11,6 @@ namespace XioCloudSpaceCSharp
                 GetEventName(args.EventId),
                 args.Index
             );
-            // Handle all events which come in from XiO
             switch (args.EventId)
             {
                 case XioCloudSpaceEventIds.SpaceCapacityEventId:

@@ -15,10 +15,10 @@ namespace XioCloudSpaceCSharp
                 _logger.Debug("Temperature unit changed. Is Celsius: {IsCelsius}", value);
                 _xioCloudRoomGui.Main.Climate.TemperatureInFarenheit_Selected(!_temperatureInCelsius);
                 _xioCloudRoomGui.Main.Climate.TemperatrueInCelsius_Selected(_temperatureInCelsius);
-                ControllerXioCloudSpaceSlotDevice.Climate.TemperatureInCelsiusFeedback.BoolValue =
-                    _temperatureInCelsius;
                 UpdateTemperatureDisplay();
                 UpdateSetTemperatureDisplay();
+                // TODO: Update the feedback state in the XioCloudSpaceSlotDevice
+
             }
         }
 

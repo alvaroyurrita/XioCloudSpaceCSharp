@@ -14,8 +14,8 @@ namespace XioCloudSpaceCSharp
                 if (_isInCall == value) return;
                 _logger.Debug("In call state changed. New state: {State}", value);
                 _isInCall = value;
-                ControllerXioCloudSpaceSlotDevice.Call.InCallFeedback.BoolValue = _isInCall;
                 _xioCloudRoomGui.Main.Call.InCallToggle_Selected(_isInCall);
+                // TODO: Update the call feedback state in the XioCloudSpaceSlotDevice
             }
         }
     }

@@ -124,7 +124,8 @@ namespace XioCloudSpaceCSharp
                 if (state)
                 {
                     _logger.Debug("Resolving all alerts...");
-                    xioMain.ResolveAllAlertsFeedback.BoolValue = true;
+                    //TODO: Set Resolve All Alerts Feedback on XIO to true
+
                     currentAlertMessage = string.Empty;
                     uiMain.AlertMessage_IndirectText(currentAlertMessage);
                     currentResolveAlertMessage = string.Empty;

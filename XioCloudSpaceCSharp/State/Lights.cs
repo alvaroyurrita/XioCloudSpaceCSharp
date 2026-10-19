@@ -7,19 +7,14 @@ namespace XioCloudSpaceCSharp
     {
         private void ClearAllLightScenes()
         {
-            ControllerXioCloudSpaceSlotDevice.Lighting.LightsOnSceneFeedback.BoolValue = false;
-            ControllerXioCloudSpaceSlotDevice.Lighting.AnyLightOnFeedback.BoolValue = false;
-            ControllerXioCloudSpaceSlotDevice.Lighting.LightSceneFeedbacks[2].BoolValue = false;
-            ControllerXioCloudSpaceSlotDevice.Lighting.LightSceneFeedbacks[3].BoolValue = false;
-            ControllerXioCloudSpaceSlotDevice.Lighting.LightSceneFeedbacks[4].BoolValue = false;
-            ControllerXioCloudSpaceSlotDevice.Lighting.LightSceneFeedbacks[5].BoolValue = false;
-            ControllerXioCloudSpaceSlotDevice.Lighting.LightsOffSceneFeedback.BoolValue = false;
             _xioCloudRoomGui.Main.Lights.LightsScene1_Selected(false);
             _xioCloudRoomGui.Main.Lights.LightsScene2_Selected(false);
             _xioCloudRoomGui.Main.Lights.LightsScene3_Selected(false);
             _xioCloudRoomGui.Main.Lights.LightsScene4_Selected(false);
             _xioCloudRoomGui.Main.Lights.LightsScene5_Selected(false);
             _xioCloudRoomGui.Main.Lights.LightsScene6_Selected(false);
+            // TODO: Clear all XIO Lights feedbacks
+           
         }
 
         private ushort _currentLightScene;
@@ -35,34 +30,28 @@ namespace XioCloudSpaceCSharp
                 switch (_currentLightScene)
                 {
                     case 1:
-                        ControllerXioCloudSpaceSlotDevice.Lighting.LightsOnSceneFeedback.BoolValue = true;
-                        ControllerXioCloudSpaceSlotDevice.Lighting.AnyLightOnFeedback.BoolValue = true;
                         _xioCloudRoomGui.Main.Lights.LightsScene1_Selected(true);
+                        // TODO: Set the feedback for Lights On Scene and Any Light On
                         break;
                     case 2:
-                        ControllerXioCloudSpaceSlotDevice.Lighting.LightSceneFeedbacks[2].BoolValue = true;
-                        ControllerXioCloudSpaceSlotDevice.Lighting.AnyLightOnFeedback.BoolValue = true;
                         _xioCloudRoomGui.Main.Lights.LightsScene2_Selected(true);
+                        // TODO: Set the feedback for Lights Scene 2 and Any Light On
                         break;
                     case 3:
-                        ControllerXioCloudSpaceSlotDevice.Lighting.LightSceneFeedbacks[3].BoolValue = true;
-                        ControllerXioCloudSpaceSlotDevice.Lighting.AnyLightOnFeedback.BoolValue = true;
                         _xioCloudRoomGui.Main.Lights.LightsScene3_Selected(true);
+                        // TODO: Set the feedback for Lights Scene 3 and Any Light On
                         break;
                     case 4:
-                        ControllerXioCloudSpaceSlotDevice.Lighting.LightSceneFeedbacks[4].BoolValue = true;
-                        ControllerXioCloudSpaceSlotDevice.Lighting.AnyLightOnFeedback.BoolValue = true;
                         _xioCloudRoomGui.Main.Lights.LightsScene4_Selected(true);
+                        // TODO: Set the feedback for Lights Scene 4 and Any Light On
                         break;
                     case 5:
-                        ControllerXioCloudSpaceSlotDevice.Lighting.LightSceneFeedbacks[5].BoolValue = true;
-                        ControllerXioCloudSpaceSlotDevice.Lighting.AnyLightOnFeedback.BoolValue = true;
                         _xioCloudRoomGui.Main.Lights.LightsScene5_Selected(true);
+                        // TODO: Set the feedback for Lights Scene 5 and Any Light On
                         break;
                     case 6:
-                        ControllerXioCloudSpaceSlotDevice.Lighting.LightsOffSceneFeedback.BoolValue = true;
-                        ControllerXioCloudSpaceSlotDevice.Lighting.AnyLightOnFeedback.BoolValue = false;
                         _xioCloudRoomGui.Main.Lights.LightsScene6_Selected(true);
+                        // TODO: Set the feedback for Lights Scene 6 and Any Light On
                         break;
                     default:
                         break;
@@ -88,22 +77,22 @@ namespace XioCloudSpaceCSharp
                 case 2:
                     LightSceneNames[2] = name;
                     _xioCloudRoomGui.Main.Lights.LightsScene2_Serial_CIP(name);
-                    ControllerXioCloudSpaceSlotDevice.Lighting.LightSceneNames[2].StringValue = name;
+                    //TODO: Update XIO feedback for light scene 2 name
                     break;
                 case 3:
                     LightSceneNames[3] = name;
                     _xioCloudRoomGui.Main.Lights.LightsScene3_Serial_CIP(name);
-                    ControllerXioCloudSpaceSlotDevice.Lighting.LightSceneNames[3].StringValue = name;
+                    //TODO: Update XIO feedback for light scene 3 name
                     break;
                 case 4:
                     LightSceneNames[4] = name;
                     _xioCloudRoomGui.Main.Lights.LightsScene4_Serial_CIP(name);
-                    ControllerXioCloudSpaceSlotDevice.Lighting.LightSceneNames[4].StringValue = name;
+                    //TODO: Update XIO feedback for light scene 4 name
                     break;
                 case 5:
                     LightSceneNames[5] = name;
                     _xioCloudRoomGui.Main.Lights.LightsScene5_Serial_CIP(name);
-                    ControllerXioCloudSpaceSlotDevice.Lighting.LightSceneNames[5].StringValue = name;
+                    //TODO: Update XIO feedback for light scene 5 name
                     break;
             }
         }

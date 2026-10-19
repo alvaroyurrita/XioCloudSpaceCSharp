@@ -4,6 +4,7 @@ namespace XioCloudSpaceCSharp
 {
     public partial class ControlSystem
     {
+        //TODO:  Handle system events from XiO Cloud Space
         private void XioSystemEventsHandler(int eventId)
         {
             var xioSystem = ControllerXioCloudSpaceSlotDevice;
@@ -21,7 +22,7 @@ namespace XioCloudSpaceCSharp
                 case XioCloudSpaceEventIds.DisplayPowerOffEventId:
                     IsDisplayPowerOn = false;
                     break;
-                case XioCloudSpaceEventIds.OccupiedEventId: 
+                case XioCloudSpaceEventIds.OccupiedEventId:
                     _logger.Debug("XIO: Received OccupiedEventId. Occupied: {Occupied}", xioSystem.Occupied.BoolValue);
                     if (xioSystem.Occupied.BoolValue)
                         IsOccupied = true;
