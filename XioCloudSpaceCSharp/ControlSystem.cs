@@ -23,6 +23,9 @@ namespace XioCloudSpaceCSharp
                 .WriteTo.CrestronConsole(
                     outputTemplate: "[{Timestamp:HH:mm:ss} {Level:u3}] {Message:lj}{NewLine}{Exception}"
                 )
+                .WriteTo.CrestronErrorLog(
+                    outputTemplate: "[{Timestamp:HH:mm:ss} {Level:u3}] {Message:lj}{NewLine}{Exception}"
+                )
                 .CreateLogger();
 
             // Register for incoming signals from XiO

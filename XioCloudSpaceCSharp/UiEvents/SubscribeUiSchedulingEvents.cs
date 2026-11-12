@@ -49,20 +49,6 @@
                     IsInServiceNeeded = !IsInServiceNeeded;
                 }
             };
-            
-            uiScheduling.CurrentReservationSlider_LowerTouchEvent += (_, args) =>
-            {
-                var value = args.UShort();
-                _logger.Debug("CurrentReservationSlider_LowerTouchEvent. State {State}:", value);
-                CurrentReservation(value);
-            };
-            
-            uiScheduling.NextReservationSlider_LowerTouchEvent += (_, args) =>
-            {
-                var value = args.UShort();
-                _logger.Debug("NextReservationSlider_LowerTouchEvent. State {State}:", value);
-                NextReservation(value);
-            };
         }
 
     }

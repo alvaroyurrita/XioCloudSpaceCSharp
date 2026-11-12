@@ -59,19 +59,5 @@ namespace XioCloudSpaceCSharp
                 // TODO: Update the In Service Needed feedback value in the XIO
             }
         }
-
-        private void CurrentReservation(ushort index)
-        {
-            _xioCloudRoomGui.Main.Scheduling.CurrentReservationText_Indirect(HelperClasses.DateGenerator(index));
-            _xioCloudRoomGui.Main.Scheduling.CurrentReservationSlider_LowerTouchfb(index);
-            // TODO: Update the Current Reservation feedback values in XIO
-        }
-
-        private void NextReservation(ushort index)
-        {
-            _xioCloudRoomGui.Main.Scheduling.NextReservation_Indirect(HelperClasses.DateGenerator(index));
-            _xioCloudRoomGui.Main.Scheduling.NextReservationSlider_LowerTouchfb(index);
-            // TODO: Update the Next Reservation feedback values in XIO
-        }
     }
 }
