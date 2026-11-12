@@ -30,13 +30,10 @@ namespace XioCloudSpaceCSharp
                     IsOnDoNotDisturb = false;
                     break;
                 case XioCloudSpaceEventIds.CurrentMeetingStartTimeEventId:
-                    uiScheduling.CurrentReservationText_Indirect(ControllerXioCloudSpaceSlotDevice.Scheduling.CurrentMeetingStartTime.StringValue);
                     break;
                 case XioCloudSpaceEventIds.CurrentMeetingStopTimeEventId:
-                    uiScheduling.CurrentReservationText_Indirect(ControllerXioCloudSpaceSlotDevice.Scheduling.CurrentMeetingStopTime.StringValue);
                     break;
                 case XioCloudSpaceEventIds.NextMeetingStartTimeEventId:
-                    uiScheduling.CurrentReservationText_Indirect(ControllerXioCloudSpaceSlotDevice.Scheduling.NextMeetingStartTime.StringValue);
                     break;
             }
         }

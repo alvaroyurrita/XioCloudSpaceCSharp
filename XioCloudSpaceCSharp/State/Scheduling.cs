@@ -60,23 +60,5 @@ namespace XioCloudSpaceCSharp
                 _xioCloudRoomGui.Main.Scheduling.SeriviceNeededToggle_Selected(_isInServiceNeeded);
             }
         }
-
-        private void CurrentReservation(ushort index)
-        {
-            ControllerXioCloudSpaceSlotDevice.Scheduling.CurrentMeetingStartTimeFeedback.StringValue =
-                HelperClasses.DateGenerator(index);
-            ControllerXioCloudSpaceSlotDevice.Scheduling.CurrentMeetingStopTimeFeedback.StringValue =
-                HelperClasses.DateGenerator((ushort)(index + 1));
-            _xioCloudRoomGui.Main.Scheduling.CurrentReservationText_Indirect(HelperClasses.DateGenerator(index));
-            _xioCloudRoomGui.Main.Scheduling.CurrentReservationSlider_LowerTouchfb(index);
-        }
-
-        private void NextReservation(ushort index)
-        {
-            ControllerXioCloudSpaceSlotDevice.Scheduling.NextMeetingStartTimeFeedback.StringValue =
-                HelperClasses.DateGenerator(index);
-            _xioCloudRoomGui.Main.Scheduling.NextReservation_Indirect(HelperClasses.DateGenerator(index));
-            _xioCloudRoomGui.Main.Scheduling.NextReservationSlider_LowerTouchfb(index);
-        }
     }
 }
